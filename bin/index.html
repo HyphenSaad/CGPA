@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator | HyphenSaad</title>
+    <link href="https://fonts.googleapis.com/css?family=Barlow:400,400i,500" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 title="UOL CGPA Calculator by HyphenSaad">CGPA Calculator</h1>
+            <button id="colorMode" onclick="ChangeColorMode()" title="To change color mode">Dark Mode</button>
+        </div>
+    </header>
+    <div id="previous-data" class="container shadow">
+        <input type="text" class="student-name course-title" placeholder="Student Name" oninput="SaveData()">
+        <input type="number" step="0.01" class="currentCgpa course-title" placeholder="Current CGPA" min="0" max="4"
+            oninput="SaveData()">
+        <input type="number" class="totalCredits course-title" placeholder="Total Credits" min="1" oninput="SaveData()">
+    </div>
+    <div id="main-container" class="container"></div>
+    <div class="result-container container shadow">
+        <button class="add-semester-button" onclick="CreateSemester()">Add Semester</button>
+        <svg id="progress-bar" class="shadow" width="240" height="240">
+            <circle class="x-bar base" r="110" cx="120" cy="120" />
+            <circle class="y-bar base" r="110" cx="120" cy="120" />
+            <circle class="z-bar base" r="110" cx="120" cy="120" />
+            <text class="CGPA-min" x="50" y="215">0.00</text>
+            <text class="CGPA-max" x="150" y="215">4.00</text>
+            <text class="CGPA-earned" x="60" y="120">0.00</text>
+            <text class="CGPA-description" x="45" y="155">Cumulative GPA</text>
+        </svg>
+    </div>
+    <footer>
+        <div class="container footer">
+            Made with&nbsp;
+            <span style="color: rgb(243, 54, 54) !important">&nbsp;❤&nbsp;</span>
+            &nbsp;by&nbsp;<a href="https://facebook.com/HyphenSaad/">HyphenSaad</a>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>
